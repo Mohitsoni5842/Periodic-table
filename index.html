@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Periodic Table of Elements</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="elements-data.js"></script> -->
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <h1>Periodic Table of Elements</h1>
+    
+    <div id="app">
+        <div id="periodic-table" aria-label="Periodic Table of Elements" role="grid" tabindex="0"></div>
+        <div id="element-details" role="region" aria-live="polite" tabindex="0">
+            <button id="back-btn" aria-label="Back to periodic table">← Back</button>
+            <h2 id="detail-symbol"></h2>
+            <div class="atomic-number" id="detail-atomic-number"></div>
+            <div class="mass" id="detail-mass"></div>
+            <div class="property-row">
+                <div class="property-title">Name:</div>
+                <div class="property-value" id="detail-name"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Atomic Number:</div>
+                <div class="property-value" id="detail-atomic-num"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Atomic Mass:</div>
+                <div class="property-value" id="detail-atomic-mass"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Category:</div>
+                <div class="property-value" id="detail-category"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Group:</div>
+                <div class="property-value" id="detail-group"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Period:</div>
+                <div class="property-value" id="detail-period"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Phase:</div>
+                <div class="property-value" id="detail-phase"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Discovered:</div>
+                <div class="property-value" id="detail-discovered"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Electron Configuration:</div>
+                <div class="property-value" id="detail-electron-config"></div>
+            </div>
+            <div class="property-row">
+                <div class="property-title">Common Isotopes:</div>
+                <div class="property-value" id="detail-isotopes"></div>
+            </div>
+            <div class="property-row full-width">
+                <div class="property-title">Interesting Fact:</div>
+                <div class="property-value" id="detail-fact"></div>
+            </div>
+        </div>
+
+        <div id="legend" aria-label="Legend for element categories">
+            <div class="alkali-metal"><span></span> Alkali Metal</div>
+            <div class="alkaline-earth-metal"><span></span> Alkaline Earth Metal</div>
+            <div class="transition-metal"><span></span> Transition Metal</div>
+            <div class="post-transition-metal"><span></span> Post-Transition Metal</div>
+            <div class="metalloid"><span></span> Metalloid</div>
+            <div class="nonmetal"><span></span> Nonmetal</div>
+            <div class="noble-gas"><span></span> Noble Gas</div>
+            <div class="lanthanide"><span></span> Lanthanide</div>
+            <div class="actinide"><span></span> Actinide</div>
+            <div class="unknown"><span></span> Unknown</div>
+        </div>
+    </div>
+    <div id="all-elements-desc">
+        <button id="desc-back-btn">← Back</button>
+        <h2>All Elements Description</h2>
+        <div id="desc-list"></div>
+    </div>
+    <div id="element-tooltip"></div>
+</body>
+
+</html>
