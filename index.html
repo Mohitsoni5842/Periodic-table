@@ -12,9 +12,13 @@
 
 <body>
     <h1>Periodic Table of Elements</h1>
-    
+
     <div id="app">
-        <div id="periodic-table" aria-label="Periodic Table of Elements" role="grid" tabindex="0"></div>
+        <button id="desc-btn">All Elements Description</button>
+
+        <div class="table-scroll">
+            <div id="periodic-table" aria-label="Periodic Table of Elements" role="grid" tabindex="0"></div>
+        </div>
         <div id="element-details" role="region" aria-live="polite" tabindex="0">
             <button id="back-btn" aria-label="Back to periodic table">← Back</button>
             <h2 id="detail-symbol"></h2>
