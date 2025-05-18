@@ -96,7 +96,6 @@ backBtn.addEventListener('click', () => {
     showTable();
 });
 
-// Legend hover effects
 document.querySelectorAll('#legend > div').forEach(legendDiv => {
     const categoryClass = Array.from(legendDiv.classList).find(cls =>
         [
@@ -134,30 +133,16 @@ document.querySelectorAll('#legend > div').forEach(legendDiv => {
     });
 });
 
-// Description page button
-const descBtn = document.createElement('button');
-descBtn.textContent = "All Elements Description";
-descBtn.style.background = "#ffffff";
-descBtn.style.border = "none";
-descBtn.style.borderRadius = "12px";
-descBtn.style.padding = "10px 18px";
-descBtn.style.margin = "1rem auto 0 auto";
-descBtn.style.fontSize = "1rem";
-descBtn.style.fontWeight = "600";
-descBtn.style.color = "#121212";
-descBtn.style.cursor = "pointer";
-descBtn.style.display = "block";
-document.querySelector("#app").insertBefore(descBtn, document.getElementById("periodic-table"));
 
-// Description page logic
 const descPage = document.getElementById('all-elements-desc');
 const descList = document.getElementById('desc-list');
 const descBackBtn = document.getElementById('desc-back-btn');
 
-descBtn.addEventListener('click', () => {
+document.querySelector("#desc-btn").addEventListener('click', () => {
     document.getElementById('periodic-table').style.display = 'none';
     document.getElementById('element-details').style.display = 'none';
     descPage.style.display = 'flex';
+    
     descPage.setAttribute('aria-hidden', 'false');
     buildDescList();
 });
@@ -227,6 +212,7 @@ table.addEventListener('mouseout', function(e) {
     tooltip.style.display = 'none';
 });
 
-// Initialize
+
 buildTable();
 showTable();
+
